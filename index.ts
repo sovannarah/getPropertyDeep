@@ -6,8 +6,6 @@ function flatRecursive(a: Array<any>, searchKey: string, t: Array<any>, entityId
             }
             if (typeof a[i] === "object" && !Array.isArray(a[i])) {
                 for (let [key, value] of Object.entries(a[`${i}`])) {
-                    key = key;
-
                     if (key === searchKey) {
                         if (value) {
                             if (Array.isArray(value) && value.length > 0) {
