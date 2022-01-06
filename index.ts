@@ -18,11 +18,12 @@ function getPropertyDeep(data: Array<any>, searchKey: string, values: Array<any>
                         }
                     }
                     if (typeof value === "object" && value) {
-                        this.flatRecursive(value, searchKey, values);
+                        this.getPropertyDeep(value, searchKey, values);
                     }
                 }
             }
         }
     }
     return values;
+}
 }
