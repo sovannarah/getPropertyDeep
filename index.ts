@@ -9,11 +9,11 @@ function flatRecursive(data: Array<any>, searchKey: string, values: Array<any> =
                                 value = value.map((x: any) => ({...x}))
                             }
                             if (typeof value === "object" && !Array.isArray(value)) {
-                                t.push({...value});
+                                values.push({...value});
                             } else if (Array.isArray(value)) {
-                                t.push(...value);
+                                values.push(...value);
                             } else {
-                                t.push(value);
+                                values.push(value);
                             }
                         }
                     }
