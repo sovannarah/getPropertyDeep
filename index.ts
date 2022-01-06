@@ -1,4 +1,4 @@
-function flatRecursive(data: Array<any>, searchKey: string, values: Array<any> = []) {
+function getPropertyDeep(data: Array<any>, searchKey: string, values: Array<any> = []) {
     if (Array.isArray(data)) {
         for (let i = 0; i < data.length; i++) {
             if (typeof data[i] === "object" && !Array.isArray(data[i])) {
